@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: 0;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+}
+body {
+    background-color: #fff;
+}
+section {
+    margin-top: 50px;
+}
+
+header {
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 15%;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+
+}
+header  .logo a {
+    font-size: 25px;
+    color: #f6d238;
+    font-weight: bold;
+}
+header  .logo a span {
+    color: #000;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 15px;
+    list-style: none;
+}
+.menu li a {
+    color: #999;
+    font-size: 14px;
+    transition: 0.5s;
+
+}
+.menu li a:hover{
+    background-color: #f6d238;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+}
+
+/* Home accueil CSS */
+
+#home {
+    background-image:url("image/Backgroun.jpg");
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+#home h2 {
+    font-size: 45px;
+    -webkit-text-stroke: #fff 0.02px;
+    color: transparent;
+    text-transform: capitalize;
+}
+#home h4 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;    
+}
+#home p {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+
+
+/* À propos CSS */
+#a-propos {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 10%;
+    width: 100%;
+}
+.title {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.title::after {
+    position: absolute;
+    left: -15px;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 5px;
+}
+.img-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.img-desc .left {
+    position: relative;
+    margin-left: 10px;
+    height: 250px;
+    width: 40%;
+}
+.img-desc .right {
+    width: 57%;
+}
+.img-desc .left img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 0 10px #f6d238;
+}
+.img-desc .left::after {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 100%;
+    z-index: -1;
+
+}
+.img-desc .right h3 {
+    color: #000;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.img-desc .right p {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 36px;
+}
+.img-desc .right a {
+    color: #f6d238;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.img-desc .right a span {
+    color: #000;
+}
+    
+ 
+/* Destinations CSS */
+#destination {
+    padding: 0 10% ;
+    margin-bottom: 50px;
+}
+#destination .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 32px;
+}
+#destination .content .box {
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    transition: 0.5s;
+}
+#destination .content .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box .content{
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #f1f1f1;
+    text-align: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: 0.5s;
+    box-shadow: 0 0 10px #000;
+}
+.box .content h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.box .content p {
+    padding-top: 2px;
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+.box .content a {
+    margin-top: 60px;
+    padding: 10px 60px;
+    background-color: #f6d238;
+    border-radius: 20px;
+    color: #111;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.box .content a:hover{
+    background-color: #f1f1f1;
+    color: #111;
+    font-weight: bold;
+    box-shadow: 0 0 10px #f6d238;
+}
+.box:hover {
+    box-shadow: 0 0 10px #f6d238;
+}
+.box:hover .content {
+    transform: translateX(0);
+}
+
+
+/* Contact CSS */
+#contact {
+    padding: 0 10%;
+    margin-bottom: 50px;
+    height: 90vh;
+}
+#contact form {
+    background-color: #f1f1f1;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.left-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  
+}
+.left-right .left , .left-right .right {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+#contact form label {
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 600;
+}
+#contact form input {
+    padding: 8px;
+    outline: 0;
+    border: 1px solid #111;
+}
+textarea {
+    height: 150px;
+    resize: none;
+    outline: 0;
+    width: 100%;
+    padding: 10px;
+}
+#contact form input:focus , textarea:focus {
+    border: 1px solid #f6d238;
+    box-shadow: 0 0 10px #f6d238;
+}
+#contact button {
+    width: fit-content;
+    padding: 8px 40px;
+    font-weight: bold;
+    background-color: #f6d238;
+    border: #f6d238;
+    color: #111;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#contact button:hover {
+    letter-spacing: 1px;
+    background-color: #f1f1f1;
+    color: #111;
+    font-weight: bold;
+    box-shadow: 0 0 10px #f6d238;
+
+}
+footer {
+    width: 100%;
+    margin-top: 120px;
+    border-radius: 30px 30px 0 0;
+    padding: 5px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}    
+footer .right-footer {
+    color: #999;
+    font-size: 12px;
+}
+footer .right-footer span {
+    color: #f6d238;
+}
+
+
+/* Tour Eiffel CSS */
+#tour-eiffel{
+    background-image:url("image/paris-1.jpg");
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#tour-eiffel h2 {
+    margin-left: 60%;
+    margin-top: 10%;
+    font-size: 30px;
+    color: #f6d238;
+}
+#tour-eiffel h4 {
+    margin-left: 60%;
+    padding-right: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+#TE {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 10%;
+    width: 100%;
+}
+.title-TE {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.title-TE::after {
+    position: absolute;
+    left: -15px;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 5px;
+}
+.img-TE {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.img-TE .left-TE {
+    position: relative;
+    margin-left: 10px;
+    height: 250px;
+    width: 40%;
+}
+.img-TE .right-TE {
+    width: 57%;
+}
+.img-TE .left-TE video {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 10px #f6d238;
+}
+.img-TE .left-TE::after {
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+    content: '';
+    height: 92%;
+    background-color: #f6d238;
+    width: 100%;
+    z-index: -1;
+
+}
+.img-TE .right-TE p {
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+hr {
+    margin-bottom: 10px;
+}
+
+#TE-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.title-text {
+    text-transform: capitalize;
+    margin: 50px 0 20px 0;
+    padding: 0 10%;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.title-text::after {
+    position: absolute;
+    left: -15px;
+    margin-left: 10%;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 5px;
+}
+.title-text .text p {
+    font-size: 20px;
+    padding: 0 5%;
+}
+.text p span {
+    color: #fff;
+}
+.text a {
+    margin-top: 60px;
+    padding: 10px 60px;
+    background-color: #f6d238;
+    border-radius: 20px;
+    color: #111;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.text a:hover {
+    background-color: #f1f1f1;
+    color: #111;
+    font-weight: bold;
+    box-shadow: 0 0 10px #f6d238;
+}
+
+
+
+/* La Statue de la Liberte CSS */
+#Statue-Liberte{
+    background-image:url("image/S-Liberte-1.jpg");
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#Statue-Liberte h2 {
+    margin-left: 50%;
+    margin-right: 5%;
+    margin-top: 10%;
+    font-size: 30px;
+    color: #f6d238;
+}
+#Statue-Liberte h4 {
+    margin-left: 50%;
+    padding-right: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+#SL {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.left-SL {
+    position: relative;
+    margin: 70px 0;
+    height: 500px;
+    width: 600px;
+}
+.left-SL img {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+}
+.left-SL .photo-grid-1 {
+    width: 350px;
+    height: 420px;
+    left: 110px;
+    border: 5px solid #fff;
+    transition: 0.5s;
+}
+.left-SL .photo-grid-1:hover {
+    transform: scale(1.1);
+}
+.left-SL .photo-grid-2 {
+    width: 300px;
+    height: 250px;
+    top: 170px;
+    left: 380px;
+    transition: 0.5s;
+}
+.left-SL .photo-grid-2:hover {
+    transform: scale(1.1);
+}
+.right-SL {
+    margin-left: 100px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.right-SL .text {
+    margin: 40px 0;
+}
+
+.right-SL .text .h1 {
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.right-SL .text .p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+/* Le Colisee CSS */
+#Colisee{
+    background-image:url("image/colisee.jpg");
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#Colisee h2 {
+    margin-left: 60%;
+    margin-top: 3%;
+    font-size: 30px;
+    color: #f6d238;
+}
+#Colisee h4 {
+    margin-left: 60%;
+    padding-right: 40px;
+    font-size: 20px;
+    color: #000;
+}
+.row-col {
+    display: flex;
+    height: 88%;
+    margin: 5% 0;
+    align-items: center;
+}
+.row-col .col {
+    flex-basis: 50%;
+    width: 30%;
+}
+.row-col .col h1 {
+    font-size: 25px;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+
+.row-col .col p {
+    font-size: 18px;
+    padding: 0 10%;
+}
+.card {
+    width: 230px;
+    height: 300px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    margin: 7px 12px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card1{
+    background-image: url(image/colisee-1.jpg);
+}
+.card2{
+    background-image: url(image/colisee-2.jpg);
+}
+.card3{
+    background-image: url(image/colisee-3.jpg);
+}
+.card4{
+    background-image: url(image/colisee-4.jpg);
+}
+.card:hover {
+    transform: translateY(-10px);
+
+}
+hr {
+    margin-bottom: 10px;
+}
+
+#col-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.title-text {
+    text-transform: capitalize;
+    margin: 50px 0 20px 0;
+    padding: 0 10%;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.title-text::after {
+    position: absolute;
+    left: -15px;
+    margin-left: 10%;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 5px;
+}
+.text {
+    font-size: 14px;
+    padding: 0 5%;
+}
+
+
+/* Les canaux de Venise CSS */
+#venise {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.52)), url("image/venise-1.jpg");
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#venise h2 {
+    margin-right: 50%;
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 30px;
+    color: #f6d238;
+}
+#venise h4 {
+    margin-right: 50%;
+    margin-left: 5%;
+    padding-right: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+#canaux {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.left-can {
+    position: relative;
+    margin: 70px 0;
+    height: 500px;
+    width: 600px;
+}
+.left-can img {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+}
+.left-can .photo-can-1 {
+    width: 350px;
+    height: 420px;
+    left: 110px;
+    border: 5px solid #fff;
+    transition: 0.5s;
+}
+.left-can .photo-can-1:hover {
+    transform: scale(1.1);
+}
+.left-can .photo-can-2 {
+    width: 300px;
+    height: 250px;
+    top: 170px;
+    left: 380px;
+    transition: 0.5s;
+}
+.left-can .photo-can-2:hover {
+    transform: scale(1.1);
+}
+.right-can {
+    margin-left: 100px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.right-can .text-can {
+    margin: 40px 0;
+}
+
+.right-can .text-can h1 {
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.right-can .text-can p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+
+/* Le Taj Mahal CSS */
+#taj-mahal {
+    background-image:  linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("image/tajmahal-1.jpg");
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#taj-mahal h2 {
+    margin-left: 50%;
+    margin-right: 5%;
+    margin-top: 20%;
+    font-size: 30px;
+    color: #f6d238;
+}
+#taj-mahal h4 {
+    margin-left: 50%;
+    padding-right: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+#Taj {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 10%;
+    width: 100%;
+}
+.title-Taj1 {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.title-Taj1::after {
+    position: absolute;
+    left: -15px;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 5px;
+}
+#Taj {
+    padding: 0 10% ;
+    margin-bottom: 50px;
+}
+#Taj .col-L {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 32px;
+}
+#Taj .col-L .boite {
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    transition: 0.5s;
+}
+#Taj .col-L .boite img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.boite:hover {
+    box-shadow: 0 0 10px #f6d238;
+}
+
+/* Le Mont Taranaki CSS */
+#Taranaki {
+    background-image:  linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("image/taranaki2.jpg");
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#Taranaki h2 {
+    margin-right: 50%;
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 30px;
+    color: #f6d238;
+}
+#Taranaki h4 {
+    margin-right: 50%;
+    margin-left: 5%;
+    padding-right: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+#Tar {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.title-Tar {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.title-Tar::after {
+    position: absolute;
+    left: -15px;
+    content: '';
+    height: 100%;
+    background-color: #f6d238;
+    width: 5px;
+}
+.img-Tar {
+    display: flex;
+    gap: 20px;
+}
+.column-Tar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+.photo- img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.photo- img:hover{
+    box-shadow: 0 0 10px #f6d238;
+}
+.photo- video {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.photo- video:hover {
+    box-shadow: 0 0 10px #f6d238;
+}
+.photo- .tar-3 {
+    height: 532px;
+}
