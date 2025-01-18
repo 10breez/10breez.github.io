@@ -468,6 +468,10 @@ hr {
     font-weight: bold;
     box-shadow: 0 0 10px #f6d238;
 }
+iframe {
+    margin-left: 27%;
+    box-shadow: 0 0 10px #111;
+}
 
 
 
